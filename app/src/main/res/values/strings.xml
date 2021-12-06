@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Ödev4</string>
+    <string name="enter_input">Eczane Adı Girin</string>
+    <string name="options_change_name">İsmi Düzenle</string>
+    <string name="options_change_avatar">Resmi Değiştir</string>
+    <string name="save_text">Kaydet</string>
+    <string name="login_text">Giriş</string>
+    <string name="change_name">Değiştirilecek Eczane İsmini Girin</string>
+    <string name="order_prompt">Bir sıralama ölçütü seçin.</string>
+    <string-array name="order">
+        <item>İlaç Adı</item>
+        <item>İlaç Türü</item>
+        <item>Firma</item>
+    </string-array>
+    <string name="infoMedName">İlaç Adı</string>
+    <string name="infoMedCompany">Firma Adı</string>
+    <string name="infoMedType">İlaç Türü</string>
+    <string name="next_page">Sonraki Ekran</string>
+    <string name="enter_medicine_name_hint">İlaç adı giriniz</string>
+    <string name="enter_medicine_type_hint">İlaç kategorisini giriniz</string>
+    <string name="enter_company_name_hint">Firma adı giriniz.</string>
+    <string name="enter_stock_hint">Stok adedi giriniz.</string>
+    <string name="add_medicine_button_text">Listele</string>
+</resources>

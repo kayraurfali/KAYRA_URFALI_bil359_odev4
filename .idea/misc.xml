@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/kayra/.gradle/caches/transforms-3/a2cf22c4e451df1c5f1fd5975f090150/transformed/appcompat-1.3.1/res/layout/support_simple_spinner_dropdown_item.xml" value="0.176" />
+        <entry key="..\:/Users/kayra/AppData/Local/Android/Sdk/platforms/android-31/data/res/layout/simple_spinner_item.xml" value="0.14166666666666666" />
+        <entry key="..\:/Users/kayra/Desktop/WORKSPACE/KOTLIN/KAYRA_URFALI_bil359_odev4/app/src/main/res/drawable/border.xml" value="0.2703125" />
+        <entry key="..\:/Users/kayra/Desktop/WORKSPACE/KOTLIN/KAYRA_URFALI_bil359_odev4/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.2703125" />
+        <entry key="..\:/Users/kayra/Desktop/WORKSPACE/KOTLIN/KAYRA_URFALI_bil359_odev4/app/src/main/res/layout/activity_add_new_medicine.xml" value="0.264" />
+        <entry key="..\:/Users/kayra/Desktop/WORKSPACE/KOTLIN/KAYRA_URFALI_bil359_odev4/app/src/main/res/layout/activity_ilac_liste_ekrani.xml" value="0.264" />
+        <entry key="..\:/Users/kayra/Desktop/WORKSPACE/KOTLIN/KAYRA_URFALI_bil359_odev4/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/kayra/Desktop/WORKSPACE/KOTLIN/KAYRA_URFALI_bil359_odev4/app/src/main/res/layout/medicine_list_row.xml" value="0.4" />
+        <entry key="..\:/Users/kayra/Desktop/WORKSPACE/KOTLIN/KAYRA_URFALI_bil359_odev4/app/src/main/res/menu/options.xml" value="0.536" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.264" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

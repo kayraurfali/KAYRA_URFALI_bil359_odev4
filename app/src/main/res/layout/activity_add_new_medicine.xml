@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_pink"
+    tools:context=".AddNewMedicineActivity">
+
+    <EditText
+        android:id="@+id/inputCompany"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/border"
+        android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="@string/enter_company_name_hint"
+        android:inputType="textPersonName"
+        android:textColor="#1565C0"
+        app:layout_constraintBottom_toTopOf="@+id/inputStock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputMedicineName" />
+
+    <Button
+        android:id="@+id/addMedicineButton"
+        android:layout_width="192dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="135dp"
+        android:background="@color/purple_200"
+        android:onClick="onClickAddNewMedicine"
+        android:text="@string/add_medicine_button_text"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputMedicineType" />
+
+    <EditText
+        android:id="@+id/inputMedicineName"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="132dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="21dp"
+        android:background="@drawable/border"
+        android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="@string/enter_medicine_name_hint"
+        android:inputType="textPersonName"
+        android:textAlignment="gravity"
+        app:layout_constraintBottom_toTopOf="@+id/inputCompany"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inputStock"
+        android:layout_width="241dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="27dp"
+        android:background="@drawable/border"
+        android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="@string/enter_stock_hint"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/inputMedicineType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputCompany" />
+
+    <EditText
+        android:id="@+id/inputMedicineType"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="95dp"
+        android:background="@drawable/border"
+        android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="@string/enter_medicine_type_hint"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/addMedicineButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputStock"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
