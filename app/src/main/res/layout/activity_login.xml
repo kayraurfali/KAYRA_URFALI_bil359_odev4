@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_pink"
-    tools:context=".MainActivity">
+    tools:context=".LoginActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -37,6 +37,8 @@
             android:layout_width="303dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
+            android:textColorHint="@color/purple_200"
+            android:textColor="@color/purple_700"
             android:background="@color/white"
             android:ems="10"
             android:hint="@string/enter_input"

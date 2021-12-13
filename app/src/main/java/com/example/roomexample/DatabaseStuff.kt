@@ -5,7 +5,7 @@ import androidx.room.*
 import androidx.room.migration.Migration
 
 
-@Entity(tableName = "medicines_list")
+@Entity(tableName = "medicineList")
 data class MedicineData (
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "ilac_id")
@@ -17,22 +17,30 @@ data class MedicineData (
     @ColumnInfo(name = "ilac_firma")
     var ilacFirma: String?,
     @ColumnInfo(name = "ilac_stok")
-    val ilacStok: Int
+    var ilacStok: Int,
+    @ColumnInfo(name = "ilac_konum")
+    var ilacKonum: String?
 )
 
 @Dao
 interface IMedicineDataDao {
-    @Query("SELECT * FROM medicines_list")
+    @Query("SELECT * FROM medicineList")
     fun loadAllMedicines() : Array<MedicineData>
 
-    @Query("SELECT * FROM medicines_list ORDER BY ilac_ad ASC")
+    @Query("SELECT * FROM medicineList ORDER BY ilac_ad ASC")
     fun loadAllOrderByName() : Array<MedicineData>
 
-    @Query("SELECT * FROM medicines_list ORDER BY ilac_firma ASC")
+    @Query("SELECT * FROM medicineList ORDER BY ilac_firma ASC")
     fun loadAllOrderByCompany() : Array<MedicineData>
 
-    @Query("SELECT * FROM medicines_list ORDER BY ilac_kategori ASC")
+    @Query("SELECT * FROM medicineList ORDER BY ilac_kategori ASC")
     fun loadAllOrderByType() : Array<MedicineData>
+
+    @Query("SELECT * FROM medicineList WHERE ilac_stok < 20 ORDER BY ilac_stok ASC ")
+    fun loadLowOnStock() : Array<MedicineData>
+
+    @Query("SELECT ilac_konum FROM medicineList WHERE ilac_ad LIKE :medicineName LIMIT 1")
+    fun getMedicineLocationByName(medicineName: String) : String
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertMedicine(value: MedicineData)
@@ -57,7 +65,7 @@ abstract class AppDatabase : RoomDatabase() {
             {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
-                    AppDatabase::class.java, "medicines_list"
+                    AppDatabase::class.java, "medicineList"
                 )
                     .allowMainThreadQueries()
                     .build()

@@ -1,14 +1,11 @@
 package com.example.roomexample
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
-import androidx.constraintlayout.motion.widget.OnSwipe
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -25,7 +22,7 @@ class MedicineListActivity : AppCompatActivity(), AdapterView.OnItemSelectedList
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_ilac_liste_ekrani)
+        setContentView(R.layout.activity_medicine_list)
 
         dao = AppDatabase.getDatabase(applicationContext).medicineDataDao()
 
@@ -63,11 +60,10 @@ class MedicineListActivity : AppCompatActivity(), AdapterView.OnItemSelectedList
                 medicineListAdapter.medicineList = dao.loadAllOrderByName().toList() as ArrayList<MedicineData>
             }
             1 -> {
-                medicineListAdapter.medicineList = dao.loadAllOrderByCompany().toList() as ArrayList<MedicineData>
+                medicineListAdapter.medicineList = dao.loadAllOrderByType().toList() as ArrayList<MedicineData>
             }
             2 -> {
-                medicineListAdapter.medicineList = dao.loadAllOrderByType().toList() as ArrayList<MedicineData>
-
+                medicineListAdapter.medicineList = dao.loadAllOrderByCompany().toList() as ArrayList<MedicineData>
             }
         }
         medicineListAdapter.notifyDataSetChanged()
@@ -76,9 +72,5 @@ class MedicineListActivity : AppCompatActivity(), AdapterView.OnItemSelectedList
 
     override fun onNothingSelected(parent: AdapterView<*>) {
         // Another interface callback
-    }
-
-    fun onClickNextPage(view: View?) {
-        startActivity(Intent(applicationContext, ActivitySwitchVars.classes[ActivitySwitchVars.ACTIVITY_ADD_NEW_MEDICINE]))
     }
 }

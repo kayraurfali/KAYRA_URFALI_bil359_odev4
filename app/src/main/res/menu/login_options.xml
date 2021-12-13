@@ -3,10 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:id="@+id/options_name"
-        android:title="@string/options_change_name"
+        android:title="@string/login_options_change_name"
         app:showAsAction="never"/>
     <item android:id="@+id/options_avatar"
-        android:title="@string/options_change_avatar"
+        android:title="@string/login_options_change_avatar"
         app:showAsAction="never"
         />
 </menu>

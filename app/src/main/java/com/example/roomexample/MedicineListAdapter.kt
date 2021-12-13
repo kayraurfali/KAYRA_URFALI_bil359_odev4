@@ -13,7 +13,7 @@ class MedicineListAdapter(var medicineList: List<MedicineData>) : RecyclerView.A
     class MedicineViewHolder(view: View) : RecyclerView.ViewHolder(view){
         var orderNumber : TextView = view.findViewById(R.id.orderNumber)
         var medicineName : TextView = view.findViewById(R.id.medicineName)
-        var companyName : TextView = view.findViewById(R.id.companyName)
+        var companyName : TextView = view.findViewById(R.id.medicineCompany)
         var medicineType : TextView = view.findViewById(R.id.medicineType)
     }
 
@@ -23,8 +23,9 @@ class MedicineListAdapter(var medicineList: List<MedicineData>) : RecyclerView.A
     }
 
     override fun onBindViewHolder(holder: MedicineViewHolder, position: Int) {
+        if(medicineList.isNullOrEmpty()) return
         var medicineData = medicineList[position]
-        holder.orderNumber.text = orderNum.toString();
+        holder.orderNumber.text = orderNum.toString()
         holder.medicineName.text = medicineData.ilacAd
         holder.companyName.text = medicineData.ilacFirma
         holder.medicineType.text = medicineData.ilacKategori
@@ -37,9 +38,5 @@ class MedicineListAdapter(var medicineList: List<MedicineData>) : RecyclerView.A
 
     fun resetOrderNum() {
         orderNum = 0
-    }
-
-    fun getItems() {
-        medicineList.forEach(::println)
     }
 }

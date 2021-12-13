@@ -7,89 +7,133 @@
     android:background="@color/background_pink"
     tools:context=".AddNewMedicineActivity">
 
-    <EditText
+    <Spinner
         android:id="@+id/inputCompany"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="29dp"
-        android:layout_marginEnd="29dp"
-        android:layout_marginBottom="28dp"
-        android:background="@drawable/border"
+        android:layout_width="369dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="103dp"
+        android:background="@android:drawable/btn_dropdown"
         android:ems="10"
         android:gravity="center_horizontal|center_vertical"
         android:hint="@string/enter_company_name_hint"
         android:inputType="textPersonName"
         android:textColor="#1565C0"
-        app:layout_constraintBottom_toTopOf="@+id/inputStock"
+        app:layout_constraintBottom_toTopOf="@+id/medicine_type_hint_tw"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputMedicineName" />
+        app:layout_constraintTop_toBottomOf="@+id/medicine_company_hint_tw"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/medicine_company_hint_tw"
+        android:layout_width="250dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="153dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/enter_company_name_hint"
+        android:textColor="@color/purple_700"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/inputCompany"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/addMedicineButton"
-        android:layout_width="192dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="135dp"
+        android:layout_width="215dp"
+        android:layout_height="69dp"
+        android:layout_marginBottom="44dp"
         android:background="@color/purple_200"
         android:onClick="onClickAddNewMedicine"
         android:text="@string/add_medicine_button_text"
         android:textAlignment="center"
         android:textAllCaps="false"
+        android:textColor="#5E35B1"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputMedicineType" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/inputMedicineName"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="132dp"
-        android:layout_marginEnd="26dp"
-        android:layout_marginBottom="21dp"
+        android:layout_width="371dp"
+        android:layout_height="64dp"
         android:background="@drawable/border"
         android:ems="10"
         android:gravity="center_horizontal|center_vertical"
         android:hint="@string/enter_medicine_name_hint"
         android:inputType="textPersonName"
         android:textAlignment="gravity"
-        app:layout_constraintBottom_toTopOf="@+id/inputCompany"
+        android:textColor="@color/purple_700"
+        android:textColorHint="@color/purple_200"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/medicine_company_hint_tw"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
 
     <EditText
         android:id="@+id/inputStock"
-        android:layout_width="241dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="27dp"
+        android:layout_width="270dp"
+        android:layout_height="66dp"
         android:background="@drawable/border"
         android:ems="10"
         android:gravity="center_horizontal|center_vertical"
         android:hint="@string/enter_stock_hint"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/inputMedicineType"
+        android:textColor="@color/purple_700"
+        android:textColorHint="@color/purple_200"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/medicine_type_hint_tw"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputCompany" />
 
-    <EditText
+    <Spinner
         android:id="@+id/inputMedicineType"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginEnd="34dp"
-        android:layout_marginBottom="95dp"
-        android:background="@drawable/border"
+        android:layout_width="368dp"
+        android:layout_height="54dp"
+        android:background="@android:drawable/btn_dropdown"
         android:ems="10"
         android:gravity="center_horizontal|center_vertical"
-        android:hint="@string/enter_medicine_type_hint"
         android:inputType="textPersonName"
+        android:textColor="#1565C0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/medicine_type_hint_tw"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/medicine_type_hint_tw"
+        android:layout_width="250dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="357dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/enter_medicine_type_hint"
+        android:textColor="@color/purple_700"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputCompany"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/inputMedicineLocation"
+        android:layout_width="359dp"
+        android:layout_height="140dp"
+        android:background="@drawable/border"
+        android:ems="10"
+        android:gravity="top|left"
+        android:hint="@string/enter_medicine_location_hint"
+        android:inputType="textPersonName"
+        android:padding="20dp"
+        android:textColor="@color/purple_700"
+        android:textColorHint="@color/purple_200"
         app:layout_constraintBottom_toTopOf="@+id/addMedicineButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputStock"/>
+        app:layout_constraintTop_toBottomOf="@+id/inputMedicineType" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

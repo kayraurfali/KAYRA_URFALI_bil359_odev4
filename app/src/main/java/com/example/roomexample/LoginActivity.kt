@@ -2,7 +2,6 @@ package com.example.roomexample
 
 import android.content.Context
 import android.graphics.Bitmap
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -22,31 +21,30 @@ import android.graphics.BitmapFactory
 import java.io.*
 
 
-class MainActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
     private lateinit var imgView: ImageView
     private lateinit var inputText: EditText
     private lateinit var button: Button
-
-    private lateinit var preferences: SharedPreferences
 
     private lateinit var activityResult: ActivityResultLauncher<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_login)
 
         imgView = findViewById(R.id.eczResim)
         inputText = findViewById(R.id.eczIsim)
         button = findViewById(R.id.login_button)
-        preferences = PreferenceManager.getDefaultSharedPreferences(applicationContext)
 
-        var imgdir = preferences.getString("profileImgDir", "")
+        SharedPrefManager.setup(applicationContext)
+
+        var imgdir = SharedPrefManager.getString("profileImgDir")
 
         if(!imgdir.isNullOrEmpty()) {
             loadImage(imgdir)
         }
 
-        if (preferences.getString("eczaneIsim", "").isNullOrEmpty()) {
+        if (SharedPrefManager.getString("eczaneIsim").isNullOrEmpty()) {
             nameChangeSetup()
         }
         else {
@@ -60,13 +58,11 @@ class MainActivity : AppCompatActivity() {
                 saveImage(imgView.drawable.toBitmap())
             }
         )
-
-        ActivitySwitchVars.set()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.options, menu)
-        return true;
+        menuInflater.inflate(R.menu.login_options, menu)
+        return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -96,17 +92,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun OnButtonClickChangeName() {
-        var editor = preferences.edit()
         var inputstr = inputText.text.toString()
-        if(!inputstr.isNullOrEmpty())
-        editor.putString("eczaneIsim", inputstr)
-        editor.apply()
+        SharedPrefManager.putString("eczaneIsim", inputstr)
         initialSetup()
     }
 
     fun OnButtonClickLogin() {
-        if(inputText.text.toString().equals(preferences.getString("eczaneIsim", ""))) {
-            startActivity(Intent(applicationContext, MedicineListActivity::class.java))
+        if(inputText.text.toString().equals(SharedPrefManager.getString("eczaneIsim"))) {
+            startActivity(Intent(applicationContext, NavMenuActivity::class.java))
         }
     }
 
@@ -131,9 +124,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        var editor = preferences.edit()
-        editor.putString("profileImgDir", dir.absolutePath)
-        editor.apply()
+        SharedPrefManager.putString("profileImgDir", dir.absolutePath)
     }
 
     fun loadImage(path: String?) {
