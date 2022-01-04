@@ -12,7 +12,7 @@ import androidx.core.text.isDigitsOnly
 import androidx.preference.PreferenceManager
 
 
-class AddNewMedicineActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
+class ActivityAddNewMedicine : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
     lateinit var dao: IMedicineDataDao
 

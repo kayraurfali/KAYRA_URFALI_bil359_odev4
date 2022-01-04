@@ -10,10 +10,8 @@ import android.widget.*
 import androidx.activity.result.ActivityResultCallback
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.preference.PreferenceManager
 import android.content.ContextWrapper
 import android.content.Intent
-import android.content.SharedPreferences
 import androidx.core.graphics.drawable.toBitmap
 import java.lang.Exception
 import android.graphics.BitmapFactory
@@ -21,7 +19,7 @@ import android.graphics.BitmapFactory
 import java.io.*
 
 
-class LoginActivity : AppCompatActivity() {
+class ActivityLogin : AppCompatActivity() {
     private lateinit var imgView: ImageView
     private lateinit var inputText: EditText
     private lateinit var button: Button
@@ -99,7 +97,7 @@ class LoginActivity : AppCompatActivity() {
 
     fun OnButtonClickLogin() {
         if(inputText.text.toString().equals(SharedPrefManager.getString("eczaneIsim"))) {
-            startActivity(Intent(applicationContext, NavMenuActivity::class.java))
+            startActivity(Intent(applicationContext, ActivityNavMenu::class.java))
         }
     }
 

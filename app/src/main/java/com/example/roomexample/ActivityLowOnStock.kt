@@ -6,12 +6,12 @@ import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class LowOnStockActivity : AppCompatActivity() {
+class ActivityLowOnStock : AppCompatActivity() {
 
     lateinit var dao: IMedicineDataDao
 
     lateinit var recyclerView: RecyclerView
-    lateinit var medicineListAdapter: LowOnStockAdapter
+    lateinit var medicineListAdapter: AdapterLowOnStock
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,9 +22,9 @@ class LowOnStockActivity : AppCompatActivity() {
         recyclerView = findViewById(R.id.lowOnStockMedicines)
         var arr = dao.loadLowOnStock()
         if(arr.isNotEmpty())
-            medicineListAdapter = LowOnStockAdapter(arr.toList())
+            medicineListAdapter = AdapterLowOnStock(arr.toList())
         else
-            medicineListAdapter = LowOnStockAdapter(ArrayList())
+            medicineListAdapter = AdapterLowOnStock(ArrayList())
 
         recyclerView.layoutManager = LinearLayoutManager(applicationContext)
         recyclerView.itemAnimator = DefaultItemAnimator()

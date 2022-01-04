@@ -10,13 +10,13 @@ import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class MedicineListActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener  {
+class ActivityMedicineList : AppCompatActivity(), AdapterView.OnItemSelectedListener  {
 
     lateinit var ddlist: Spinner
     lateinit var dao: IMedicineDataDao
 
     lateinit var recyclerView: RecyclerView
-    lateinit var medicineListAdapter: MedicineListAdapter
+    lateinit var medicineListAdapter: AdapterMedicineList
 
     var selectedItemPos : Int = 0
 
@@ -41,9 +41,9 @@ class MedicineListActivity : AppCompatActivity(), AdapterView.OnItemSelectedList
         recyclerView = findViewById(R.id.medicineList)
         var arr = dao.loadAllMedicines()
         if(arr.isNotEmpty())
-            medicineListAdapter = MedicineListAdapter(arr.toList() as ArrayList<MedicineData>)
+            medicineListAdapter = AdapterMedicineList(arr.toList() as ArrayList<MedicineData>)
         else
-            medicineListAdapter = MedicineListAdapter(ArrayList())
+            medicineListAdapter = AdapterMedicineList(ArrayList())
 
         recyclerView.layoutManager = LinearLayoutManager(applicationContext)
         recyclerView.itemAnimator = DefaultItemAnimator()

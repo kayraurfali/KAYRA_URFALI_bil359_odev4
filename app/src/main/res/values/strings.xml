@@ -1,8 +1,6 @@
 <resources>
     <string name="app_name">Eczane</string>
     <string name="enter_input">Eczane Adı Girin</string>
-    <string name="login_options_change_name">İsmi Düzenle</string>
-    <string name="login_options_change_avatar">Resmi Değiştir</string>
     <string name="save_text">Kaydet</string>
     <string name="login_text">Giriş</string>
     <string name="change_name">Değiştirilecek Eczane İsmini Girin</string>
@@ -22,12 +20,19 @@
     <string name="enter_medicine_location_hint">İlaç konumunu giriniz</string>
     <string name="enter_stock_hint">Stok adedi giriniz.</string>
     <string name="add_medicine_button_text">Listele</string>
+
     <string name="new_item_options_add_category">Kategori Ekle</string>
     <string name="new_item_options_add_company">Firma Ekle</string>
+    <string name="login_options_change_name">İsmi Düzenle</string>
+    <string name="login_options_change_avatar">Resmi Değiştir</string>
+    <string name="employee_options_add">Personel Ekle</string>
+    <string name="employee_options_remove">Personel Sil</string>
+
     <string name="nav_menu_medicine_list">İlaç Listesi</string>
     <string name="nav_menu_add_medicine">Yeni İlaç Ekle</string>
     <string name="nav_menu_low_on_stock">Stoğu Azalan İlaçlar</string>
     <string name="nav_menu_search_medicine">İlaç Ara</string>
+    <string name="nav_menu_employee_list">Personel Listesi</string>
 
     <string name="add_medicine_options_ok">Ekle</string>
     <string name="add_medicine_options_cancel">İptal</string>
@@ -36,4 +41,10 @@
 
     <string name="search_medicine_hint">İlaç adı</string>
     <string name="search_button_hint">search button</string>
+
+    <string name="employee_list">Personel Listesi</string>
+    <string name="employee_first_name_hint">Personel Adı</string>
+    <string name="employee_last_name_hint">Personel Soyadı</string>
+    <string name="employee_add_button">Kaydet</string>
+    <string name="employee_remove_button">Sil</string>
 </resources>

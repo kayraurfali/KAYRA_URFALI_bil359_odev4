@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.EditText
 import android.widget.TextView
 
-class SearchMedicineActivity : AppCompatActivity() {
+class ActivitySearchMedicine : AppCompatActivity() {
 
     lateinit var input : EditText
     lateinit var output : TextView

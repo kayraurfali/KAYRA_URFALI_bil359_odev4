@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class MedicineListAdapter(var medicineList: List<MedicineData>) : RecyclerView.Adapter<MedicineListAdapter.MedicineViewHolder>() {
+class AdapterMedicineList(var medicineList: List<MedicineData>) : RecyclerView.Adapter<AdapterMedicineList.MedicineViewHolder>() {
 
     var orderNum : Int = 0
 

@@ -11,4 +11,5 @@
     <color name="medicine_list_item_border">#a28ec5</color>
     <color name="medicine_name_background">#f2e7fd</color>
     <color name="order_number_background">#bda3d2</color>
+    <color name="hint">#9575cd</color>
 </resources>

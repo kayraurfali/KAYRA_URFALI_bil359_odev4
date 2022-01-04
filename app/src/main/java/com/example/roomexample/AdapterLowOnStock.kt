@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class LowOnStockAdapter(var medicineList: List<MedicineData>) : RecyclerView.Adapter<LowOnStockAdapter.LowOnStockViewHolder>() {
+class AdapterLowOnStock(var medicineList: List<MedicineData>) : RecyclerView.Adapter<AdapterLowOnStock.LowOnStockViewHolder>() {
 
     var orderNum : Int = 0
 

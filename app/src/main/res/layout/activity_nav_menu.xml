@@ -5,29 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_pink"
-    tools:context=".NavMenuActivity">
-
-    <Button
-        android:id="@+id/nav_menu_medicine_list_btn"
-        android:layout_width="151dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="89dp"
-        android:layout_marginBottom="95dp"
-        android:background="@drawable/border"
-        android:onClick="onClickNavButton"
-        android:text="@string/nav_menu_medicine_list"
-        android:textColor="#1565C0"
-        app:layout_constraintBottom_toTopOf="@+id/nav_menu_add_medicine_btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TextContrastCheck" />
+    tools:context=".ActivityNavMenu">
 
     <Button
         android:id="@+id/nav_menu_add_medicine_btn"
         android:layout_width="151dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="79dp"
+        android:layout_height="67dp"
+        android:layout_marginBottom="@dimen/nav_menu_button_bottom_margin"
         android:background="@drawable/border"
         android:onClick="onClickNavButton"
         android:text="@string/nav_menu_add_medicine"
@@ -35,14 +19,43 @@
         app:layout_constraintBottom_toTopOf="@+id/nav_menu_low_on_stock_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nav_menu_medicine_list_btn"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/nav_menu_employee_list"
+        android:layout_width="151dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="@dimen/nav_menu_button_bottom_margin"
+        android:background="@drawable/border"
+        android:onClick="onClickNavButton"
+        android:text="@string/nav_menu_employee_list"
+        android:textColor="#1565C0"
+        app:layout_constraintBottom_toTopOf="@+id/nav_menu_medicine_list_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/nav_menu_medicine_list_btn"
+        android:layout_width="151dp"
+        android:layout_height="67dp"
+        android:layout_marginBottom="@dimen/nav_menu_button_bottom_margin"
+        android:background="@drawable/border"
+        android:onClick="onClickNavButton"
+        android:text="@string/nav_menu_medicine_list"
+        android:textColor="#1565C0"
+        app:layout_constraintBottom_toTopOf="@+id/nav_menu_add_medicine_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/nav_menu_low_on_stock_btn"
         android:layout_width="151dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="86dp"
+        android:layout_height="67dp"
+        android:layout_marginBottom="@dimen/nav_menu_button_bottom_margin"
         android:background="@drawable/border"
         android:onClick="onClickNavButton"
         android:text="@string/nav_menu_low_on_stock"
@@ -50,14 +63,13 @@
         app:layout_constraintBottom_toTopOf="@+id/nav_menu_search_medicine_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nav_menu_add_medicine_btn"
         tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/nav_menu_search_medicine_btn"
         android:layout_width="151dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="114dp"
+        android:layout_height="67dp"
+        android:layout_marginBottom="100dp"
         android:background="@drawable/border"
         android:onClick="onClickNavButton"
         android:text="@string/nav_menu_search_medicine"
@@ -65,7 +77,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nav_menu_low_on_stock_btn"
         tools:ignore="TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

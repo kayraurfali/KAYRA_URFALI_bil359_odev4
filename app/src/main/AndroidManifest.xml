@@ -9,27 +9,35 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true">
         <activity
-            android:name=".SearchMedicineActivity"
+            android:name=".ActivityEmployeeOps"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
         <activity
-            android:name=".LowOnStockActivity"
-            android:exported="true"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
-        <activity
-            android:name=".NavMenuActivity"
-            android:exported="true"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
-        <activity
-            android:name=".AddNewMedicineActivity"
+            android:name=".ActivityEmployeeList"
             android:exported="true"
             android:theme="@style/Theme.Roomexample" />
         <activity
-            android:name=".MedicineListActivity"
+            android:name=".ActivitySearchMedicine"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".ActivityLowOnStock"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".ActivityNavMenu"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".ActivityAddNewMedicine"
+            android:exported="true"
+            android:theme="@style/Theme.Roomexample" />
+        <activity
+            android:name=".ActivityMedicineList"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".ActivityLogin"
             android:exported="true"
             android:theme="@style/Theme.Roomexample">
             <intent-filter>
